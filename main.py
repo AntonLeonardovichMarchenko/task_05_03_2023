@@ -1,16 +1,28 @@
-# This is a sample Python script.
+"""
+Вывести на экран циклом пять строк из нулей, причем каждая строка должна быть пронумерована.
+Пользователь в цикле вводит 10 цифр. Найти количество введенных пользователем цифр 5.
+Найти сумму ряда чисел от 1 до 100. Полученный результат вывести на экран.
+Найти произведение ряда чисел от 1 до 10. Полученный результат вывести на экран.
+Вывести цифры числа на каждой строчке.
+"""
+class ZerosMaker:
+    def __init__(self, m, n):
+        self.m = m
+        self.n = n
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+    def print_hi(self, name):
+        print(f'Hi, {name}')
 
+    def zeros(self):
+        print(f'm == {self.m}, n == {self.n} \n')
+        strz = str(0)*self.m
+        for i in range(0, self.n):
+            print(f'{i}   {strz}')
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
 
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    zs_maker = ZerosMaker(5, 9)
+    zs_maker.print_hi('PyCharm')
+    zs_maker.zeros()
